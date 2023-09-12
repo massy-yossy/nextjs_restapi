@@ -22,13 +22,13 @@ class PostRetrieveView(generics.RetrieveUpdateAPIView):
 
 
 class TaskListView(generics.ListAPIView):
-    queryset = Post.objects.all()
+    queryset = Task.objects.all()
     serializer_class = TaskSerializer
     permission_classes = (AllowAny,)
 
 
 class TaskRetrieveView(generics.RetrieveAPIView):
-    queryset = Post.objects.all()
+    queryset = Task.objects.all()
     serializer_class = TaskSerializer
     permission_classes = (AllowAny,)
 
